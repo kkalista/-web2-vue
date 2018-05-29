@@ -1,15 +1,7 @@
 <template>
   <div id="app">
   <h1>Witaj w systemie do zapisow na zajecia</h1>
-
-<login-form
-    v-if="!isAuthenticated"
-     @login="logIn($event)">
-    </login-form>
-    <div v-else>
-       <label> Zalogowany jako {{email}}</label>      
-      <button @click="logOut()">Wyloguj</button>
-    </div>
+    <login-form></login-form>
 </div>
 
 </template>
@@ -17,7 +9,6 @@
 <script>
 import "milligram";
 import LoginForm from "./LoginForm";
-//import MeetingPage from "./meetings/MeetingPage";
 
 export default {
   name: "app",
